@@ -38,7 +38,7 @@ const loop = setInterval(()=>{
 document.addEventListener('keydown', jump);
 // quando precionarmos uma tecla ela vai 'keydown' acontecera a ação do jump
 
-
+// COmentario teste
 
 
 
