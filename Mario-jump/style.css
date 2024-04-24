@@ -1,0 +1,83 @@
+*{
+    margin: 0; /*margem*/
+    padding: 0; /*preenchimento*/
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%; /*largura*/
+    height: 500px; /*altura*/
+    border-bottom: 15px solid rgb(5, 244, 5); /*borda colorida para parecer a grama*/
+    margin: 0 auto; /*margem*/ 
+    position: relative; /*usado para delimitar a imagem dentro do quadro*/
+    overflow: hidden; /*usado para que qualquer coisa fora das limitações do quadro, não apareçam*/
+    background: linear-gradient(#87CEEB, #E0F6FF); /*Código de cores usados para ter um fundo de céu azul*/
+}
+
+.pipe{
+    position: absolute;/*Usado para não interferir uma imagem com a outra*/
+    bottom: 0; /*Fundo*/
+    width: 80px;
+     /*Usado para o bloco começar escondido*/
+    /* left: 150px; */
+    animation: pipe-animation 1.5s infinite linear; 
+}
+
+.mario{
+    width: 150px;
+    position: absolute; /*posicionamento do mario*/
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear; 
+}
+
+@keyframes jump{
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+
+@keyframes pipe-animation { /*usado para mover a animação do Pipe*/
+    from{
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
