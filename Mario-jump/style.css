@@ -39,7 +39,44 @@
     animation: clouds-animation 20s infinite linear; 
 }
 
-@keyframes jump{
+#score {
+    position: absolute;
+    bottom: 20px; /* Ajuste a posição vertical conforme desejado */
+    left: 20px; /* Ajuste a posição horizontal conforme desejado */
+    font-size: 24px; /* Tamanho da fonte */
+    margin: 20px;
+    color: #000000; /* Cor do texto */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+#score #score-value {
+    font-weight: bold; /* Negrito */
+    color:#20308F; /* Cor do texto */
+}
+
+#restart-button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #87CEEB; /* Cor de fundo do botão */
+    color: black; /* Cor do texto */
+    padding: 15px 32px; /* Espaçamento interno do botão */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remover sublinhado do texto */
+    display: inline-block; /* Exibir como um bloco */
+    font-size: 15px; /* Tamanho da fonte */
+    margin: 20px; /* Margem externa */
+    cursor: pointer; /* Cursor do mouse */
+    border-radius: 8px; /* Raio da borda para bordas arredondadas */
+    border: none; /* Remover borda */
+    transition: background-color 0.3s; /* Transição suave da cor de fundo */
+}
+
+#restart-button:hover {
+    background-color: #E0F6FF; /* Cor de fundo quando o mouse passa por cima */
+}
+
+@keyframes jump{ /*'keyframes' é uma regra em CSS que permite criar animações controladas por etapas*/
     0% {
         bottom: 0;
     }
